@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_TECNO-CD8j.mk
+    $(LOCAL_DIR)/omni_TECNO_CD8j.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_TECNO-CD8j-user \
-    omni_TECNO-CD8j-userdebug \
-    omni_TECNO-CD8j-eng
+    omni_TECNO_CD8j-user \
+    omni_TECNO_CD8j-userdebug \
+    omni_TECNO_CD8j-eng
