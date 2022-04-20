@@ -1,7 +1,21 @@
 # mount point       fstype    device                                                                flags
-/system            ext4     system                                                   flags=display="System";backup=1;logical
-/vendor            ext4     vendor                                                   flags=display="Vendor";backup=1;logical
-/product           ext4     product                                                  flags=display="Product";backup=1;logical
+# Dynamic partitions
+/system				  ext4		         /dev/block/dm-3              flags=backup=1;display="System dm-3"
+/product        	ext4	    	/dev/block/dm-5              flags=backup=1;display="Product dm-5"
+/vendor			    	ext4		         /dev/block/dm-4              flags=backup=1;display="Vendor dm-4"
+
+/product            ext4      /dev/block/mapper/product     flags=backup=1;display="Product ext4"
+/product_image	    emmc		  /dev/block/mapper/product	flags=backup=1;display="Product Image";flashimg=1
+/super            	emmc      	/dev/block/platform/bootdevice/by-name/super              flags=backup=1;display="Super_image";flashimg=1
+/system		        	ext4	      	/dev/block/mapper/system      flags=backup=1;display="System ext4"
+/system_image	      emmc	    	/dev/block/mapper/system    flags=backup=1;display="System Image";flashimg=1
+/vendor             ext4      /dev/block/mapper/vendor      flags=backup=1;display="Vendor ext4"
+/vendor_image	    emmc		    /dev/block/mapper/vendor    flags=backup=1;display="Vendor Image";flashimg=1
+
+/external_sd       auto         /dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="External_SDcard";storage;wipeingui;removable;fsflags="utf8"
+/usb-otg           auto         /dev/block/sda1  /dev/block/sda                     flags=display="Usb_Otg";storage;wipeingui;removable;fsflags="utf8"
+
+
 /metadata          ext4     /dev/block/platform/bootdevice/by-name/md_udc            flags=display="Metadata"
 /data              f2fs     /dev/block/platform/bootdevice/by-name/userdata          flags=display="Data"
 /cache             ext4     /dev/block/platform/bootdevice/by-name/cache             flags=display="Cache"
@@ -42,3 +56,6 @@
 /dtbo              emmc     /dev/block/platform/bootdevice/by-name/dtbo              flags=display="Dtbo";backup=1;flashimg=1
 /vbmeta            emmc     /dev/block/platform/bootdevice/by-name/vbmeta            flags=display="Vbmeta"
 /tkv               emmc     /dev/block/platform/bootdevice/by-name/tkv               flags=display="Tkv"
+/oemkeystore		   emmc	    /dev/block/platform/bootdevice/by-name/oemkeystore
+/otp               emmc     /dev/block/platform/bootdevice/by-name/otp              flags=display="otp";backup=1
+/para		           emmc	    /dev/block/platform/bootdevice/by-name/para             flags=display="para";backup=1
