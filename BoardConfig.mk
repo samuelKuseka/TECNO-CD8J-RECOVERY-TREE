@@ -132,7 +132,6 @@ TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := en
 
 # PBRP Build Flags
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
 PB_DISABLE_DEFAULT_DM_VERITY := true
 PB_TORCH_PATH := /sys/devices/virtual/torch/torch/torch_level
 PB_TORCH_MAX_BRIGHTNESS := 1
