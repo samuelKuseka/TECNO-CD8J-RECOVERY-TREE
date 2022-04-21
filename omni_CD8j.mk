@@ -18,8 +18,12 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := TECNO_CD8j
-PRODUCT_NAME := omni_TECNO_CD8j
+PRODUCT_DEVICE := CD8j
+PRODUCT_NAME := omni_CD8j
 PRODUCT_BRAND := TECNO
-PRODUCT_MODEL := TECNO CD8j
-PRODUCT_MANUFACTURER := tecno
+PRODUCT_MODEL := Camon 15 Premier
+PRODUCT_MANUFACTURER := TECNO MOBILE LIMITED
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=TECNO-CD8j \
+    PRODUCT_DEVICE=TECNO_CD8j
