@@ -11,11 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from TECNO-CD8j device
-$(call inherit-product, device/tecno/TECNO_CD8j/device.mk)
+$(call inherit-product, device/TECNO/CD8j/device.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/PB/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := CD8j
