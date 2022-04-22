@@ -131,8 +131,17 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_EXTRA_LANGUAGES := false
 TW_DEFAULT_LANGUAGE := en
 
-# PBRP Build Flags
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
-PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_TORCH_PATH := /sys/devices/virtual/torch/torch/torch_level
-PB_TORCH_MAX_BRIGHTNESS := 1
+#SHRP_Variables
+SHRP_PATH := device/coolpad/c103
+SHRP_MAINTAINER := Kehkashi
+SHRP_DEVICE_CODE := c103
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb-otg
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_REC_TYPE := Treble
+SHRP_DEVICE_TYPE := AB
+SHRP_FLASH := 1
+#SHRP_FONP_1 := /sys/devices/virtual/torch/torch/torch_level
+#SHRP_FLASH_MAX_BRIGHTNESS := 1
